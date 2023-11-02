@@ -5,7 +5,7 @@ class Database
     private $host = 'db';
     private $username = 'sonaro';
     private $password = 'insecuredevpassword';
-    private $database = 'sonaro';
+    private $database = 'sonaro'; //logins to mysql
     private $connection;
 
     public function __construct()

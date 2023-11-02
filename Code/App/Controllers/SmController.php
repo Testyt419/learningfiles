@@ -10,7 +10,7 @@ class SmController  extends \Controller{
     }
     //potentially parent this bitch
     public function send_mail(){
-        If(isset($_POST['sendout'])){
+        If(isset($_POST['sendout'])){ //messy but does the job
             $to=$_POST['to'];
             $subject=$_POST['subject'];
             $message=$_POST['message'];

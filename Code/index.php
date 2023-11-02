@@ -1,7 +1,7 @@
 <?php
 spl_autoload_register(function ($className) {   //i have no clue what it does as a whole yet, 
-                                                //something about auto loading a function in 
-                                                //the specific case, $classname is a variable of the function
+                                                //something about auto loading a class in 
+                                                //the specific case, $classname is a variable of the class
     $classPath = str_replace('\\', '/', $className); //replaces all instances of \\ by /,
                                                      //i would guess for the purposes of pathing
     $file = __DIR__ . '/' . $classPath . '.php';
@@ -26,7 +26,7 @@ $router = new Router(); //dec new variable router, it is a an object of a class 
 $router->get('/',"IndexController@index");
 $router->get('/table',"TableController@table");
 $router->get('/sm',"SmController@sm");
-$router->post('/send_mail',"SmController@send_mail");
+$router->post('/send_mail',"SmController@send_mail"); //all fucks are routes.
 $router->dispatch();
 
 
